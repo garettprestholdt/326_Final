@@ -1,4 +1,5 @@
-# Common columns for years 2004-2015
+import polars as pl
+
 columns_to_keep = [
     'ACRES_DEED',
     'ACRES_POLY',
@@ -54,3 +55,6 @@ columns_to_keep = [
     'YEAR_BUILT',
     'ZIP',
 ]
+
+column_schema = {col: pl.String for col in columns_to_keep}
+
