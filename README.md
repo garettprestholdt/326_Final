@@ -1,5 +1,19 @@
-# 326_Final
-This is my repositroy for my final project in my DSCI 326 class. The goal of this project was to see how water quality affected property pricing. The dataset was quite large (~10GB) so the main use for this project was to get used to performing lazy actions to format our data so that we could push it through a CART and Random Forest model. 
+# Twin Cities Water Quality & Property Value Analysis
 
-Each lab notebook tackled a different part of the process of getting to that point. Lab 1 was just downloading and looking at the raw data. Lab 2 was understanding how we would go about joining the tables together. Lab 3 created partitioned parquet files for easier lazy querying. Lab 4 was looking at the water quality table specifically and prepping it for join. Lab 5 we looked into which features could be used as predictors in our models. Lab 6 was fitting and validating our CART and Random Forest models.
+**Objective:** Analyze the correlation between residential property pricing and local water quality in the Twin Cities using a **~10GB dataset** of 1.5 million records.
+
+**Built With:** Python, **Polars (LazyFrames)**, Parquet Partitioning, Scikit-Learn (CART, Random Forest).
+
+### Data Sources
+* **MetroGIS Tax Parcels:** 1.5M records (2002–2015) including valuation and dwelling type.
+* **Met Council Lake Data:** Historical quality metrics (Secchi depth, Phosphorus) for 332 lakes.
+* **Spatial Cross-Reference:** Distance calculations between parcels and monitoring stations.
+
+### Workflow
+* **Lab 1: Ingestion:** Handled raw ingestion of 13 years of tax data and spatial files.
+* **Lab 2: Integration:** Designed logic to join tax records with water monitoring stations using spatial keys.
+* **Lab 3: Optimization:** Converted CSVs to **partitioned Parquet files**, enabling efficient lazy querying on large-scale data.
+* **Lab 4: Processing:** Aggregated granular water quality metrics (e.g., Seasonal Grade) for modeling.
+* **Lab 5: Feature Engineering:** Selected predictors from property attributes (ownership, dwelling type) and lake proximity.
+* **Lab 6: Modeling:** Trained and validated **CART** and **Random Forest** models to predict property value impacts.
 
