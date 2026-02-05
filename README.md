@@ -10,7 +10,7 @@
 * **Spatial Cross-Reference:** Distance calculations between parcels and monitoring stations.
 
 ### Workflow
-* **Lab 1: Ingestion:** Handled raw ingestion of 13 years of tax data and spatial files.
+* **Lab 1: Ingestion:** Downloaded and inspected the raw data.
 * **Lab 2: Integration:** Designed logic to join tax records with water monitoring stations using spatial keys.
 * **Lab 3: Optimization:** Converted CSVs to **partitioned Parquet files**, enabling efficient lazy querying on large-scale data.
 * **Lab 4: Processing:** Aggregated granular water quality metrics (e.g., Seasonal Grade) for modeling.
